@@ -21,11 +21,11 @@ app.get("/", (req, res) => {
 
 app.get('/authtest', (req, res) => {
     res.json(createJwtToken({
-        username: 'naren',
-        email: "narenltk@gmail.com",
-        displayName: "Narendiran Krishnan",
-        password: "naren1992",
-        admin: "false",
+        username: process.env.USERNAME,
+        email: process.env.EMAIL,
+        displayName: process.env.DISPLAYNAME,
+        password: process.env.PASSWORD,
+        admin: process.env.ADMIN,
     }));
 });
 
