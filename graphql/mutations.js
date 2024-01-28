@@ -6,7 +6,10 @@ import { createJwtToken } from '../utils/auth.js';
 const register = {
     type: userType,
     args: {
-        input: { type: userInputType },
+        userName: { type: GraphQLString },
+        email: { type: GraphQLString },
+        password: { type: GraphQLString },
+        displayName: { type: GraphQLString },
     },
     async resolve(parent, args) {
         const { userName, email, password, displayName } = args.input;
